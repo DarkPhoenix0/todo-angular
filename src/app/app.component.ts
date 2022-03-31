@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular_test';
+
+  isAuth = false
+
+  appareils = [
+    {
+      name : 'Smart Phone',
+      status : 'allumé'
+    },
+    {
+      name : 'Télévision',
+      status : 'allumé'
+    },
+    {
+      name : 'Ordinateur',
+      status : 'éteint'
+    },
+  ]
+
+
+  constructor(){
+
+    setTimeout(() => {
+      this.isAuth = true
+    }, 4000);
+  }
+
+  onAllume(){
+    console.log("allumer");
+  }
 }
